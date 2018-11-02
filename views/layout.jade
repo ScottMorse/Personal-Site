@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    block title
+      title Express Shop
+    link(href='/stylesheets/global.css', rel='stylesheet',type='text/css')
+    block stylesheets
+  body
+    block header
+      div#header
+        h1 Express Shop
+        a(href='/dashboard/') My Dashboard
+        a(href='/myprofile/') My Profile
+    block main
