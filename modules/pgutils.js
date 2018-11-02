@@ -3,7 +3,7 @@ const config = {
     'port': 5432,
     'user': 'postgres',
     'password': '',
-    'database': 'spacetoplay'
+    'database': 'expressshop'
 }
 
 const pg = require('pg-promise')()
@@ -38,39 +38,37 @@ function checkDefaultTables(){
         console.log('> PostgreSQL userdata table okay.')
     })
     .catch(err =>
-        createTable('userdata', [
+        createTable('addresses', [
             'id SERIAL PRIMARY KEY',
             'uid INTEGER REFERENCES users(id) NOT NULL',
-            'username VARCHAR(20) NOT NULL',
-            'fullname VARCHAR(30)',
-            'aboutme VARCHAR(280)',
-            'instrument VARCHAR(30)',
-            'location VARCHAR(30)'
-        ]).then(console.log('> PostgreSQL userdata table created.')).catch(err => console.log(err)))
-        db.oneOrNone('SELECT * FROM usernetworks LIMIT 1;')
+            'name VARCHAR(100)',
+            'street VARCHAR(100)',
+            'city VARCHAR(50)',
+            'zip INT',
+        ]).then(console.log('> PostgreSQL address table created.')).catch(err => console.log(err)))
+        db.oneOrNone('SELECT * FROM orders LIMIT 1;')
             .then(after => {
-                console.log('> PostgreSQL userfriends table okay.')
+                console.log('> PostgreSQL orders table okay.')
             })
             .catch(err =>
                 createTable('usernetworks', [
                     'id SERIAL PRIMARY KEY',
                     'uid INTEGER REFERENCES users(id) NOT NULL',
-                    'network INTEGER[] DEFAULT \'{}\'',
-                ]).then(console.log('> PostgreSQL usernetworks table created.')).catch(err => console.log(err)))
-        db.oneOrNone('SELECT * FROM notifications LIMIT 1;')
+                    'productids INTEGER[] DEFAULT \'{}\'',
+                ]).then(console.log('> PostgreSQL orders table created.')).catch(err => console.log(err)))
+        db.oneOrNone('SELECT * FROM products LIMIT 1;')
             .then(after => {
                 console.log('> PostgreSQL notifications table okay.')
             })
             .catch(err =>
-                createTable('notifications', [
+                createTable('products', [
                     'id SERIAL PRIMARY KEY',
-                    'uid INTEGER REFERENCES users(id)',
                     'code INTEGER NOT NULL',
-                    'reluid INTEGER',
-                    'evId INTEGER',
-                    'message varchar(255)',
+                    'name VARCHAR(50) NOT NULL',
+                    'price INTEGER NOT NULL',
+                    'details TEXT',
                 ]).then(after => {
-                    console.log('> PostgreSQL notifications table created.')
+                    console.log('> PostgreSQL products table created.')
                 }).catch(err => console.log(err)))
         }).catch(err => console.log(err)))
     db.oneOrNone('SELECT * FROM session LIMIT 1;')
