@@ -118,15 +118,6 @@ h1 {
     display: flex;
     overflow-x: hidden;
     display: flex;
-    align-items: center;
-}
-
-#notes {
-    width: 30vw;
-    overflow: hidden;
-    height: inherit;
-    margin: 0;
-    display: flex;
     justify-content: flex-end;
 }
 
@@ -134,10 +125,13 @@ h1 {
     background-image: url("../imgs/bach.png");
     background-size: 78vw 9vw;
     background-repeat: repeat-x;
-    background-position: left center;
+    background-position: right center;
     height: inherit;
     min-width: 1000px;
+    max-width: 1000px;
+    margin-left: calc(-500px - 30vw);
     filter: brightness(2) contrast(2);
+    transition: transform 5s linear;
 }
 
 #code{
@@ -156,18 +150,16 @@ h1 {
 
 .code-line {
     display: flex;
+    min-width: 1000px;
+    max-width: 1000px;
     justify-content: center;
     overflow: hidden;
 }
 
-#line-container{
+#code-wrap{
     position: absolute;
     overflow: hidden;
-}
-
-.line-container{
-    position: absolute;
-    overflow: hidden;
+    transition: transform 5s linear;
 }
 
 #dev{

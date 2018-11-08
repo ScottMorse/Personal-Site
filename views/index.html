@@ -19,14 +19,11 @@
             <div id="header-bckg"></div>
             <div id="header-wrap">
                 <div id="staff">
-                    <div id="clef"></div>
-                    <div id="notes">
                     <div id="note-img"></div>
-                    </div>
                 </div>
                 <h1><span class='cap'>S</span>cott <span class='cap'> M</span>orse</h1>
                 <div id="code">
-                    <div id="line-container">
+                    <div id="code-wrap">
                         <div class="code-line">def from_frequency(Hz,prefer=None):return Note(*utils.note_names_from_frequency(Hz,prefer)) rep = f'Note {self.name}{str(self.octave if self.octave != None else "")}'\def from_frequency(Hz,prefer=None):return Note(*utils.note_names_from_frequency(Hz,prefer)) rep = f'Note {self.name}{str(self.octave if self.octave != None else "")}'\</div>
                         <div class="code-line">utils.note_plus_intvl(self,intvl_obj)if type(note_obj1) is not Note or type(note_obj2) is not Note:raise ValueError("Invalid Note object passed.")utils.intvl_from_noteutils.note_plus_intvl(self,intvl_obj)if type(note_obj1) is not Note or type(note_obj2) is not Note:raise ValueError("Invalid Note object passed.")utils.intvl_from_note</div>
                         <div class="code-line">self._data = utils.parse_symbol(symbol) return Note(self._data["root"])for intvl in self.intervals.split():spelling.append(self.root + Interval(intvl))def __iter__(selfself._data = utils.parse_symbol(symbol) return Note(self._data["root"])for intvl in self.intervals.split():spelling.append(self.root + Interval(intvl))def __iter__(se</div>
