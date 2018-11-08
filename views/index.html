@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Scott Morse</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+    <Header>
+    <div id="contact">
+        <div id="contact-mask"></div>
+        <div id="contact-wrap">
+            <div id="X">X</div>
+            <div id="contact-links">
+                <h3>Contact</h3>
+                <a target="_blank" href="https://www.linkedin.com/in/scott-morse-691a0055/">LinkedIn</a>
+                <a target="_blank" href="https://github.com/ScottMorse">GitHub</a>
+                <a id="email-link" target="_blank" href="mailto:scottmorsedev@gmail.com">Email</a>
+                <div id="email">scottmorsedev@gmail.com</div>
+            </div>
+        </div>
+    </div>
+    <div id="header-bckg"></div>
+      <div id="top-nav">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#teaser-blocks">Skills</a>
+        <button id="contact-button">Contact</button>
+      </div>
+      <div id="header-wrap">
+        <div id="staff">
+            <div id="clef"></div>
+            <div id="notes">
+            <div id="note-img"></div>
+            </div>
+        </div>
+        <h1><span class='cap'>S</span>cott <span class='cap'> M</span>orse</h1>
+        <div id="code">
+            <div id="line-container">
+                <div class="code-line"><div>def from_frequency(Hz,prefer=None):return Note(*utils.note_names_from_frequency(Hz,prefer)) rep = f'Note {self.name}{str(self.octave if self.octave != None else "")}'\</div></div>
+                <div class="code-line"><div>utils.note_plus_intvl(self,intvl_obj)if type(note_obj1) is not Note or type(note_obj2) is not Note:raise ValueError("Invalid Note object passed.")utils.intvl_from_notes(note_obj1,note_obj2)</div></div>
+                <div class="code-line"><div>self._data = utils.parse_symbol(symbol) return Note(self._data["root"])for intvl in self.intervals.split():spelling.append(self.root + Interval(intvl))def __iter__(self):return iter(self.spelling)</div></div>
+            </div>
+        </div>
+      </div>
+      <h2 id="dev">Developer</h2>
+    </Header>
+<main>
+    <div id="separator"></div>
+
+    <section id="intro">
+        <div id="intro-wrap">
+            <h3>Hello!</h3>
+            <p>I am a self-taught developer in Houston, TX, now educated by the brilliant school DigitalCrafts.  </p>
+            <p>My background as a studied musician inspires my projects and fuels my thought process when I program. </p>
+        </div>
+        <div id="img-anim-wrap">
+            <div id="real-img"></div>
+            <div id="outline-img"></div>
+            <div id="black-slider"></div>
+        </div>
+    </section>
+
+    <section id="teaser-blocks">
+        <div id="tease-block-1" class="tease-block">
+            <h2>Full Stack Developer</h2>
+        </div>
+        <div id="tease-block-2" class="tease-block">
+            <h2>Python Engineer</h2>
+        </div>
+        <div id="tease-block-3" class="tease-block lefty">
+            <ul class="skill-list">
+                <h5>Web</h5>
+                <li>Node.js backend</li>
+                <li>Express.js</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+            </ul>
+            <ul class="skill-list">
+                <h5>Python</h5>
+                <li>Package author (see below)</li>
+                <li>Django (this site!)</li>
+                <li>Numpy/Pandas</li>
+                <li>Scikit-learn</li>
+                <li>Turi Create</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="separator-2"></div>
+
+    <section id="portfolio">
+        <h3>Portfolio</h4>
+        <a target="_blank" href="https://github.com/ScottMorse/PyMusician" id="pymusician" class="port-item">
+            <div class="port-text-wrap">
+                <h4 class="port-title">PyMusician</h4>
+                <p class="port-desc">PyMusician is a publicly available PyPi package that I created for myself and other music theorists, as a way to convert, automate, and create data related to musical structures such as melodies, harmonies, and rhythms.</p>
+            </div>
+            <div class="port-img"></div>
+        </a>
+        <a target="_blank" href="https://dc-express-trips.herokuapp.com/" id="express-trips" class="port-item">
+            <div class="port-text-wrap">
+                <h4 class="port-title">Trip Planner</h4>
+                <p class="port-desc">A simple webapp for keeping a user's trip plans together to show my ability to manage Express.js with PostgreSQL, along with user authentication and session storage.</p>
+            </div>
+            <div class="port-img"></div>
+        </a>
+    </section>
+
+    <section id="footer">
+
+    <div id="copy">
+    © Scott Morse 2018
+    </div>
+    </section>
+</main>
+        <script src="scripts/indexStatic.js"></script>
+    </body>
+</html>
