@@ -20,3 +20,9 @@ function mill(){
 }
 
 setInterval(mill,20)
+
+function checkScroll(){
+    
+}
+
+window.addEventListener('scroll',checkScroll)
