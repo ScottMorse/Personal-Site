@@ -9,6 +9,11 @@ html{
     font-family: 'Source Sans Pro';
 }
 
+#page-wrap{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 *:focus{
     outline: none;
 }
