@@ -31,7 +31,7 @@ a {
     padding: 10px;
     font-size: 20px;
     text-decoration: none;
-    margin: 10px;
+    margin: 8px;
     transition: background-color .35s ease, color .35s ease;
     z-index: 5;
 }
