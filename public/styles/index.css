@@ -152,14 +152,17 @@ h1 {
 .code-line {
     display: flex;
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 #line-container{
     position: absolute;
+    overflow: hidden;
 }
 
 .line-container{
     position: absolute;
+    overflow: hidden;
 }
 
 #dev{
