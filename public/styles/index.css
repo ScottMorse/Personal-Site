@@ -79,7 +79,7 @@ h3{
 }
 
 #teaser-blocks{
-    width: 100vw;
+    width: 99vw;
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
@@ -129,7 +129,7 @@ h5{
 
 #tease-block-3{
     background-color: rgb(23, 27, 39);
-    width: 100vw;
+    width: 95vw;
     display: flex;
     flex-direction: row;
 }
