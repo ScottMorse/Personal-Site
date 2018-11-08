@@ -1,317 +1,168 @@
-#separator{
-    height: 20px;
-    background-image: linear-gradient(170deg, black, rgb(22, 22, 24));
-    background: black;
+@import url('https://fonts.googleapis.com/css?family=Playball|Source+Sans+Pro:200,400|Oswald');
+
+html{
+    line-height: 1;
+    font-size: 10vw;
+}
+
+* {
+    font-family: 'Source Sans Pro';
+}
+
+#page-wrap{
+    width: 100vw;
+    overflow-x: hidden;
+    height: 200vh
+}
+
+*:focus{
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* #top-nav{
+    position: fixed;
+    z-index: 5;
+}
+
+#top-nav * {
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: none;
+    background-color: none;
+    border: 2px solid white;
+    padding: 10px;
     font-size: 20px;
-}
-
-#intro {
-    background: black;
-    font-size: 30px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 700px;
-}
-
-#intro-wrap{
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-h3{
-    font-size: 50px;
-    font-family: 'Playball';
-    color: white;
-}
-
-#intro p {
-    width: 500px;
-    text-align: center;
-    margin: 5px;
-}
-
-#img-anim-wrap{
-    width: 100vw;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-#black-slider{
-    width: 80vw;
-    height: inherit;
-    background: black;
-    margin: 0;
-    position: absolute;
-    transform: translateX(0);
-    transition: transform 4s ease;
-}
-
-#outline-img,#real-img{
-    background-color: black;
-    height: 300px;
-    width: 80vw;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-#outline-img{
-    background-image: url('../imgs/blackprofile-green-outline.png');
-    transition: opacity 1s ease;
-    filter: hue-rotate(120deg);
-}
-
-#real-img{
-    background-image: url('../imgs/blackprofile-shadow.png');
-}
-
-#teaser-blocks{
-    width: 99vw;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-
-.tease-block{
-    border: 4px solid black;
-    width: calc(50vw - 8px);
-    height: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    color: white;
-    background-position: center;
-    transition: transform 1.5s ease;
-}
-
-h5{
-    font-size: 35px;
-    margin: 0;
-    width: inherit;
-    text-align: center;
-    font-family: 'Playball';
-}
-
-.tease-block h2 {
-    background-color: rgba(3, 2, 2, 0.246);
-    padding: 5px;
-    border-radius: 5% / 20%;
-}
-
-#tease-block-1{
-    background-image: url('../imgs/pancakes.jpeg');
-    background-size: cover;
-    filter: saturate(0.4);
-    transform: translateX(-100vw);
-}
-
-#tease-block-2{
-    background-image: url('../imgs/python5.jpeg');
-    background-size: cover;
-    filter: saturate(0.4);
-    transform: translateX(100vw);
-}
-
-#tease-block-3{
-    background-color: rgb(23, 27, 39);
-    width: 99vw;
-    display: flex;
-    flex-direction: row;
-}
-
-.lefty{
-    /* align-items: flex-start; */
-}
-
-h2{
-    text-align: center;
-    font-size: 50px;
-    width: 50%;
-}
-
-.skill-list{
-    font-size: 25px;
-    margin: 20px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-li {
-    text-align: center;
-    white-space: nowrap;
-}
-
-.tease-cont{
-    background-color: rgba(170, 170, 170, 0.246);
-    color: black;
-}
-
-/* #separator-2{
-    width: 100vw;
-    height: 20px;
-    background-color: rgb(90, 89, 89);
+    text-decoration: none;
+    margin: 8px;
+    transition: background-color .35s ease, color .35s ease;
+    z-index: 5;
 } */
 
-#portfolio{
-    min-height: 500px;
+#top-nav *:hover{
+    cursor: pointer;
+    color: rgb(27, 27, 29);
+    background-color: white;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
     width: 100vw;
+    background-color: black;
+}
+
+Header {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
+    user-select: none;
 }
 
-.port-item {
-    width: 80vw;
-    min-height: 200px;
-    border-radius: 5% / 10%;
-    transition: background-color .35s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color .35s ease !important;
-    margin-bottom: 30px;
-}
-
-.port-item:hover{
-    background-color: whitesmoke !important;
-}
-
-.port-text-wrap{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5%;
-}
-
-.port-title{
-    font-size: 25px;
-    margin: 5px;
-    letter-spacing: 0.5px;
-}
-
-.port-img {
-    min-width: 170px;
-    min-height: 170px;
-    margin: 20px;
-    border-radius: 50%;
+#header-bckg{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-image: url('../imgs/desk.jpeg');
     background-size: cover;
-}
-
-#pymusician {
-    background-color: rgb(108, 253, 108);
-}
-
-#pymusician div.port-img{
-    background-image: url('../imgs/desk6.jpeg');
-}
-
-#express-trips{
-    background-color: rgb(165, 195, 202);
-    flex-direction: row-reverse;
-}
-
-#express-trips p {
-    margin-right: unset;
-    margin-left: -10%;
-}
-
-#express-trips div.port-img{
-    background-image: url('../imgs/express.jpg');
-    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
-    background-color: green;
-    filter: hue-rotate(100deg);
+    filter: brightness(0.35) saturate(0.8);
+    z-index: -1;
+    overflow-x: hidden;
 }
 
-@media screen and (max-width: 768px){
-    #intro p{
-        font-size: 25px;
-        width: 85vw;
-        margin-bottom: 20px;
-    }
-    .tease-block{
-        width: 100vw;
-        height: 300px;
-    }
-    h2{
-        font-size: 30px;
-    }
-    #separator-2{
-        display: none;
-    }
-    h5{
-        display: block;
-    }
+#header-wrap{
+    /* height: inherit; */
+    width: inherit;
+    display: flex;
+    align-items: center;
 }
 
-@media screen and (max-width: 460px){
-    .port-item{
-        flex-direction: column !important;
-    }
-    .port-desc{
-        width: 70vw;
-    }
+h1 {
+    font-family: 'Playball';
+    color: white;
+    font-size: 1.7em;
+    margin: 0;
+    z-index: 1;
+    white-space: nowrap;
+    display: flex;
 }
 
-@media screen and (min-width: 768px){
-    .port-item{
-        justify-content: space-evenly;
-    }
-    .skill-list{
-        font-size: 30px;
-    }
-    .port-desc{
-        font-size: 20px;
-    }
+.cap{
+    font-size: 1.1em;
+    font-family: inherit;
 }
 
-@media screen and (min-width: 1080px){
-    h3{
-        font-size: 80px;
-    }
-    .tease-block{
-        width: 40vw;
-        border: none;
-        font-size: 20px;
-    }
-    #tease-block-1{
-        margin: 5vw 2.5vw 2.5vw 7.5vw;
-    }
-    #tease-block-2{
-        margin: 5vw 7.5vw 2.5vw 2.5vw;
-    }
-    #tease-block-3{
-        margin: 2.5vw 2.5vw 2.5vw 7.5vw;
-        width: 85vw;
-    }
-    #intro p {
-        font-size: 3vw;
-        width: 70vw;
-        margin-bottom: 30px;
-    }
-    .skill-list{
-        font-size: 35px;
-    }
-    .port-desc{
-        font-size: 25px;
-    }
+#staff {
+    width: 30vw;
+    height: 9vw;
+    z-index: 0;
+    margin: 0;
+    margin-right: -6.1vw;
+    display: flex;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#notes {
+    width: 30vw;
+    overflow: hidden;
+    height: inherit;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#note-img{
+    background-image: url("../imgs/bach.png");
+    background-size: 78vw 9vw;
+    background-repeat: repeat-x;
+    background-position: left center;
+    height: inherit;
+    min-width: 10000vw;
+    filter: brightness(2) contrast(2);
+}
+
+#code{
+    font-family: monospace;
+    white-space: nowrap;
+    color: white;
+    width: 30vw;
+    height: 8vw;
+    transform: translateY(2.9vw);
+    margin-left: 0.38vw;
+    font-size: 0.1em;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.code-line {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#line-container{
+    position: absolute;
+}
+
+.line-container{
+    position: absolute;
+}
+
+#dev{
+    color: white;
+    font-weight: lighter;
+    width: 100vw;
+    text-align: center;
+    font-size: 8vw;
+    letter-spacing: 7px;
+    margin-top: 0;
 }
