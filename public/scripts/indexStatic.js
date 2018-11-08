@@ -8,8 +8,8 @@ noteImg.style.width = '500vw'
 
 const digEx = new RegExp(/[\d]+/)
 
-const noteX = 500 - window.innerWidth * 0.067
-const codeX = 500 - window.innerWidth * 0.3
+const noteX = 500 - window.visualViewport.width * 0.067
+const codeX = 500 - window.visualViewport.width * 0.3
 
 function toRight(){
     noteImg.style.transform = 'translateX(' + noteX + 'px)'
@@ -22,12 +22,12 @@ function toLeft(){
 }
 
 toRight()
-setInterval(toRight,10000)
+setInterval(toRight,10050)
 
 setTimeout(()=>{
     toLeft()
-    setInterval(toLeft,10000)
-},5000)
+    setInterval(toLeft,10050)
+},5050)
 
 function checkScroll(){
 
