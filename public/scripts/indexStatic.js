@@ -7,19 +7,25 @@ noteImg.style.width = '500vw'
 
 const digEx = new RegExp(/[\d]+/)
 
-let x = 0
-// function mill(){
-//     lineCont.style.transform = noteImg.style.transform =  'translateX(' + x + 'px)'
-//     noteImg.style.width = parseInt(noteImg.style.width.match(digEx)[0]) + 1 + 'vw'
-//     x++
-//     if(x % 200 == 0){
-//         codeLines.forEach(codeLine => {
-//             codeLine.insertBefore(codeLine.firstElementChild.cloneNode(true),codeLine.firstElementChild)
-//         })
-//     }
-// }
+let codeX = 0
+let noteX = 0
+function mill(){
+    if(codeX % (codeLines[0].offsetWidth) == 0){
+        codeX = 0
+    }
+    if(noteX % 500 == 0){
+        noteX = 0
+    }
+    lineCont.style.transform = noteImg.style.transform =  'translateX(' + codeX + 'px)'
+    noteImg.style.transform = 'translateX(' + noteX + 'px)'
+    codeX++
+    noteX++
+}
 
-// setInterval(mill,20)
+setInterval(mill,20)
+
+console.log(codeLines[0].offsetWidth)
+console.log(noteImg.offsetWidth)
 
 function checkScroll(){
 

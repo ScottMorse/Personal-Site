@@ -9,10 +9,14 @@ html{
     font-family: 'Asap';
 }
 
+body {
+    
+}
+
 #page-wrap{
     width: 100vw;
     overflow-x: hidden;
-    height: 200vh
+    height: 200vh;
 }
 
 *:focus{
@@ -131,7 +135,7 @@ h1 {
     background-repeat: repeat-x;
     background-position: left center;
     height: inherit;
-    min-width: 10000vw;
+    min-width: 1000px;
     filter: brightness(2) contrast(2);
 }
 
@@ -146,12 +150,12 @@ h1 {
     font-size: 0.1em;
     overflow-x: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .code-line {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     overflow: hidden;
 }
 

@@ -27,9 +27,9 @@
                 <h1><span class='cap'>S</span>cott <span class='cap'> M</span>orse</h1>
                 <div id="code">
                     <div id="line-container">
-                        <div class="code-line"><div>def from_frequency(Hz,prefer=None):return Note(*utils.note_names_from_frequency(Hz,prefer)) rep = f'Note {self.name}{str(self.octave if self.octave != None else "")}'\</div></div>
-                        <div class="code-line"><div>utils.note_plus_intvl(self,intvl_obj)if type(note_obj1) is not Note or type(note_obj2) is not Note:raise ValueError("Invalid Note object passed.")utils.intvl_from_notes(note_obj1,note_obj2)</div></div>
-                        <div class="code-line"><div>self._data = utils.parse_symbol(symbol) return Note(self._data["root"])for intvl in self.intervals.split():spelling.append(self.root + Interval(intvl))def __iter__(self):return iter(self.spelling)</div></div>
+                        <div class="code-line">def from_frequency(Hz,prefer=None):return Note(*utils.note_names_from_frequency(Hz,prefer)) rep = f'Note {self.name}{str(self.octave if self.octave != None else "")}'\def from_frequency(Hz,prefer=None):return Note(*utils.note_names_from_frequency(Hz,prefer)) rep = f'Note {self.name}{str(self.octave if self.octave != None else "")}'\</div>
+                        <div class="code-line">utils.note_plus_intvl(self,intvl_obj)if type(note_obj1) is not Note or type(note_obj2) is not Note:raise ValueError("Invalid Note object passed.")utils.intvl_from_noteutils.note_plus_intvl(self,intvl_obj)if type(note_obj1) is not Note or type(note_obj2) is not Note:raise ValueError("Invalid Note object passed.")utils.intvl_from_note</div>
+                        <div class="code-line">self._data = utils.parse_symbol(symbol) return Note(self._data["root"])for intvl in self.intervals.split():spelling.append(self.root + Interval(intvl))def __iter__(selfself._data = utils.parse_symbol(symbol) return Note(self._data["root"])for intvl in self.intervals.split():spelling.append(self.root + Interval(intvl))def __iter__(se</div>
                     </div>
                 </div>
             </div>
